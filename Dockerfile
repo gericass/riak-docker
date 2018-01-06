@@ -14,4 +14,6 @@ RUN rm -fr /var/lib/riak/ring/
     
 EXPOSE 8098
 
-ENTRYPOINT ["riak", "start"]
+COPY run.sh /home
+
+ENTRYPOINT [ "sh","/home/run.sh" ] 
